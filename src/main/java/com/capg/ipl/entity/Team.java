@@ -36,12 +36,6 @@ public class Team {
      @OneToMany
      @JsonIgnore
      private List<BiddingDetails> biddingDetails;
-     
-   
-     
-     
-     
-
 	public Team() {
       super();
 	}

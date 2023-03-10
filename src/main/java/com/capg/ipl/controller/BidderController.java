@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.capg.ipl.entity.Bidder;
 import com.capg.ipl.entity.BiddingDetails;
 import com.capg.ipl.entity.MatchDetails;
+import com.capg.ipl.entity.Team;
 import com.capg.ipl.exception.BidAlreadyExistException;
 import com.capg.ipl.exception.BidNotFoundException;
 import com.capg.ipl.exception.MatchAlreadyInProgressException;
@@ -81,6 +82,10 @@ public class BidderController {
 	public int getPoints(@PathVariable long bidderId) throws UserNotFoundException {
 		return this.bidderService.viewPoints(bidderId);
 	}
+	@GetMapping("/team/{teamId}")
+	public Team getTeamById(@PathVariable long teamId) throws TeamNotFoundException {
+		return this.bidderService.getTeamById(teamId);
+		}
 	
 
 }
