@@ -13,6 +13,7 @@ public class IplFantasyLeagueApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IplFantasyLeagueApplication.class, args);
+		System.out.println("tt");
 	}
 
 }
